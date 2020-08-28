@@ -8,9 +8,9 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
-        with:
-          repository: fastaudio/fastaudio 
+      - name: Checkout repo
+        run: |
+          git clone https://github.com/fastaudio/fastaudio.git
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
