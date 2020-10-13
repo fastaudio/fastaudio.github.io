@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -11,7 +9,7 @@
       
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
     
     
       
@@ -19,13 +17,17 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.4dd2dd8d.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.38780c08.min.css">
       
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.3f72e892.min.css">
+        
       
     
     
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
@@ -48,9 +50,14 @@
   </head>
   
   
-    <body dir="ltr">
-  
     
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -134,8 +141,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -186,7 +191,7 @@
       
     
     
-    <a href="." title="Fastaudio" class="md-nav__link md-nav__link--active">
+    <a href="." class="md-nav__link md-nav__link--active">
       Fastaudio
     </a>
     
@@ -199,8 +204,32 @@
 
 
   <li class="md-nav__item">
-    <a href="Training_tutorial/" title="Training tutorial" class="md-nav__link">
+    <a href="Training_tutorial/" class="md-nav__link">
       Training tutorial
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="TutorialSpeechCommands/" class="md-nav__link">
+      TutorialSpeechCommands
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="TutorialViceRecognition/" class="md-nav__link">
+      TutorialViceRecognition
     </a>
   </li>
 
@@ -212,14 +241,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-5">
       API Reference
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="API Reference" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-5">
         <span class="md-nav__icon md-icon"></span>
         API Reference
       </label>
@@ -232,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="API_Reference/augment.preprocess/" title="augment.preprocess" class="md-nav__link">
+    <a href="API_Reference/augment.preprocess/" class="md-nav__link">
       augment.preprocess
     </a>
   </li>
@@ -244,7 +273,7 @@
 
 
   <li class="md-nav__item">
-    <a href="API_Reference/augment.signal/" title="augment.signal" class="md-nav__link">
+    <a href="API_Reference/augment.signal/" class="md-nav__link">
       augment.signal
     </a>
   </li>
@@ -256,7 +285,7 @@
 
 
   <li class="md-nav__item">
-    <a href="API_Reference/augment.spectrogram/" title="augment.spectrogram" class="md-nav__link">
+    <a href="API_Reference/augment.spectrogram/" class="md-nav__link">
       augment.spectrogram
     </a>
   </li>
@@ -268,7 +297,7 @@
 
 
   <li class="md-nav__item">
-    <a href="API_Reference/core.config/" title="core.config" class="md-nav__link">
+    <a href="API_Reference/core.config/" class="md-nav__link">
       core.config
     </a>
   </li>
@@ -280,7 +309,7 @@
 
 
   <li class="md-nav__item">
-    <a href="API_Reference/core.signal/" title="core.signal" class="md-nav__link">
+    <a href="API_Reference/core.signal/" class="md-nav__link">
       core.signal
     </a>
   </li>
@@ -292,7 +321,7 @@
 
 
   <li class="md-nav__item">
-    <a href="API_Reference/core.spectrogram/" title="core.spectrogram" class="md-nav__link">
+    <a href="API_Reference/core.spectrogram/" class="md-nav__link">
       core.spectrogram
     </a>
   </li>
@@ -331,9 +360,6 @@
               
                 
                 
-                  
-                
-                
                 <h1 id="fastaudio">Fastaudio</h1>
 <blockquote>
 <p>An audio module for fastai v2. We want to help you build audio machine learning applications while minimizing the need for audio domain expertise. Currently under development.</p>
@@ -360,7 +386,7 @@
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
         
-          <a href="Training_tutorial/" title="Training tutorial" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="Training_tutorial/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -393,15 +419,15 @@
       
     </div>
     
-      <script src="assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: ".",
           features: [],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.5eca75d3.min.js"
+            worker: "assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
