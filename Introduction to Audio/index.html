@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6910b76c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
@@ -227,9 +227,149 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introduction to Audio
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Introduction to Audio
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basics-of-librosa-audio-signals-and-sampling" class="md-nav__link">
+    Basics of Librosa, Audio Signals, and Sampling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waveforms-amplitude-vs-magnitude" class="md-nav__link">
+    Waveforms. Amplitude vs Magnitude
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequency-and-pitch" class="md-nav__link">
+    Frequency and Pitch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mel-scale" class="md-nav__link">
+    Mel Scale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decibels" class="md-nav__link">
+    Decibels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spectrogram-as-a-visual-representation-of-audio" class="md-nav__link">
+    Spectrogram as a Visual Representation of Audio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-inside-a-spectrogram" class="md-nav__link">
+    What's Inside a Spectrogram?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spectrogram-parameters-and-how-to-fine-tune-them-for-deep-learning" class="md-nav__link">
+    Spectrogram Parameters and How to Fine Tune them for Deep Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyperparameter-cheat-sheet" class="md-nav__link">
+    HyperParameter Cheat Sheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-details" class="md-nav__link">
+    The Details
+  </a>
+  
+    <nav class="md-nav" aria-label="The Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fourier-transforms" class="md-nav__link">
+    Fourier Transforms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-time-fourier-transform" class="md-nav__link">
+    Short-Time Fourier Transform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n_fft-and-hop_length" class="md-nav__link">
+    n_fft and hop_length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-explanation-of-stft-hop_length-and-n_fft" class="md-nav__link">
+    Full explanation of STFT, hop_length, and n_fft:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n_mels" class="md-nav__link">
+    n_mels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top_db" class="md-nav__link">
+    top_db
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -251,27 +391,15 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../Training%20Tutorial/" class="md-nav__link">
-      Training Tutorial
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
-    <label class="md-nav__link" for="nav-6">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
       API Reference
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="API Reference" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-5">
         <span class="md-nav__icon md-icon"></span>
         API Reference
       </label>
@@ -372,6 +500,132 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basics-of-librosa-audio-signals-and-sampling" class="md-nav__link">
+    Basics of Librosa, Audio Signals, and Sampling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waveforms-amplitude-vs-magnitude" class="md-nav__link">
+    Waveforms. Amplitude vs Magnitude
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequency-and-pitch" class="md-nav__link">
+    Frequency and Pitch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mel-scale" class="md-nav__link">
+    Mel Scale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decibels" class="md-nav__link">
+    Decibels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spectrogram-as-a-visual-representation-of-audio" class="md-nav__link">
+    Spectrogram as a Visual Representation of Audio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-inside-a-spectrogram" class="md-nav__link">
+    What's Inside a Spectrogram?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spectrogram-parameters-and-how-to-fine-tune-them-for-deep-learning" class="md-nav__link">
+    Spectrogram Parameters and How to Fine Tune them for Deep Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyperparameter-cheat-sheet" class="md-nav__link">
+    HyperParameter Cheat Sheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-details" class="md-nav__link">
+    The Details
+  </a>
+  
+    <nav class="md-nav" aria-label="The Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fourier-transforms" class="md-nav__link">
+    Fourier Transforms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-time-fourier-transform" class="md-nav__link">
+    Short-Time Fourier Transform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n_fft-and-hop_length" class="md-nav__link">
+    n_fft and hop_length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-explanation-of-stft-hop_length-and-n_fft" class="md-nav__link">
+    Full explanation of STFT, hop_length, and n_fft:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n_mels" class="md-nav__link">
+    n_mels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top_db" class="md-nav__link">
+    top_db
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -412,17 +666,12 @@
 }());
 </script>
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="codehilite"><pre><span></span><code><span class="o">%</span><span class="n">reload_ext</span> <span class="n">autoreload</span>
-<span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
-<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-</code></pre></div>
-
-
-</div>
-
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
+<h1 id="introduction-to-audio-for-fastai-students">Introduction to Audio For FastAI Students</h1>
+<p></div>
+</div></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -439,30 +688,6 @@
 
 </div>
 
-<div class="output_wrapper" markdown="1">
-<div class="output" markdown="1">
-
-
-<div class="output_area" markdown="1">
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-<code>/home/harry/miniconda3/lib/python3.8/site-packages/torchaudio/backend/utils.py:53: UserWarning: &#34;sox&#34; backend is being deprecated. The default backend will be changed to &#34;sox_io&#34; backend in 0.8.0 and &#34;sox&#34; backend will be removed in 0.9.0. Please migrate to &#34;sox_io&#34; backend. Please refer to https://github.com/pytorch/audio/issues/903 for the detail.
-  warnings.warn(
-</code>
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<p><div class="inner_cell" markdown="1">
-<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h1 id="introduction-to-audio-for-fastai-students">Introduction to Audio For FastAI Students</h1>
-<p></div>
-</div></p>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
@@ -474,48 +699,9 @@ This guide will assume absolutely zero understanding of audio. There are lots of
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1">
-Like deep learning, audio processing has many hyperparameters and concepts that can be confusing, but will play an essential role in training models. The goal of this guide is to introduce you to some of them, show you what tweaking them does, and give you a basic understanding of what they represent and why they exist. If you don't care about the details, check out our <strong>Getting Started</strong> notebook. We have created some notebook where we show you how to use the library to get state of the art results on real world datasets:
-- <strong>ESC-50</strong> TODO INSERT LINK
-- <strong>FreeSound2018</strong> TODO INSERT LINK
-- <strong>TensorFlow Speech Challenge Notebooks</strong> TODO INSERT LINK
+Like deep learning, audio processing has many hyperparameters and concepts that can be confusing, but will play an essential role in training models. The goal of this guide is to introduce you to some of them, show you what tweaking them does, and give you a basic understanding of what they represent and why they exist. If you don't care about the details, check out our other starter notebooks.
 </div>
 </div></p>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<p><div class="inner_cell" markdown="1">
-<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h1 id="table-of-contents">Table of Contents</h1>
-<ol>
-<li>Audio Basics<ol>
-<li><a href="#Basics-of-Librosa,-Audio-Signals,-and-Sampling">Basics of Librosa, Audio Signals, and Sampling</a></li>
-<li><a href="#Waveforms.-Amplitude-vs-Magnitude">Waveforms. Amplitude vs Magnitude</a></li>
-<li><a href="#Frequency-and_Pitch">Frequency and Pitch</a></li>
-<li><a href="#Mel-Scale">Mel Scale</a></li>
-<li><a href="#Decibels">Decibels</a></li>
-</ol>
-</li>
-<li><a href="#Spectrograms">Spectrograms</a><ol>
-<li><a href="#Spectrogram-as-a-Visual-Representation-of-Audio">Spectrogram as a Visual Representation of Audio</a></li>
-<li><a href="#What's-Inside-a-Spectrogram?">What's Inside a Spectrogram?</a></li>
-<li><a href="#Spectrogram-Parameters-and-How-to-Fine-Tune-them-for-Deep-Learning">Spectrogram Parameters and How to Fine Tune Them for Deep Learning</a></li>
-<li><a href="#HyperParameter-Cheat-Sheet">HyperParameter Cheat Sheet</a></li>
-</ol>
-</li>
-<li><a href="#The-Details">The Details</a><ol>
-<li><a href="#Fourier-Transforms">Fourier Transforms</a></li>
-<li><a href="#Short-Time-Fourier-Transform">Short-Time-Fourier-Transform (STFT)</a><ol>
-<li><a href="#n_fft-and-hop_length">n_fft and hop_length</a></li>
-<li><a href="#Full-Explanation-of-STFT,-hop_length,-and-n_fft:">#Full-Explanation-of-STFT,-hop_length,-and-n_fft:</a></li>
-<li><a href="#n_mels">n_mels</a></li>
-<li><a href="#top_db">top_db</a></li>
-</ol>
-</li>
-</ol>
-</li>
-<li><a href="#Coming-Soon">Coming Soon</a>
-</div>
-</div></li>
-</ol>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
@@ -527,7 +713,7 @@ First let's grab our data.
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">speakers</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">SPEAKERS10</span><span class="p">,</span> <span class="n">extract_func</span><span class="o">=</span><span class="n">tar_extract_at_filename</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">speakers</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">SAMPLE_SPEAKERS10</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -537,7 +723,7 @@ First let's grab our data.
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">audio_files</span> <span class="o">=</span> <span class="n">speakers</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="n">audio_files</span> <span class="o">=</span> <span class="n">get_audio_files</span><span class="p">(</span><span class="n">speakers</span><span class="p">)</span>
 <span class="n">example</span> <span class="o">=</span> <span class="n">audio_files</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">audio</span> <span class="o">=</span> <span class="n">AudioTensor</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
 <span class="n">audio</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1305,13 +1491,6 @@ Just like frequency, human perception of loudness occurs on a logarithmic scale.
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h1 id="spectrograms">Spectrograms</h1>
-<p></div>
-</div></p>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<p><div class="inner_cell" markdown="1">
-<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
 <h2 id="spectrogram-as-a-visual-representation-of-audio">Spectrogram as a Visual Representation of Audio</h2>
 <p></div>
 </div></p>
@@ -1748,20 +1927,30 @@ Remember those hyperparameters mentioned in the intro? Our experiments indicate 
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1">
-Before we get into the details, here is a cheatsheet with a brief summary of what each of these do and some good defaults.</p>
-<h2 id="hyperparameter-cheat-sheet">HyperParameter Cheat Sheet</h2>
-<ul>
-<li><strong><code>sample_rate</code></strong>, This is not the place to change this, you are just telling librosa what your sample rate is. <strong>Usually it is predetermined for you by your dataset but check the resampling section for more info on changing this.</strong></li>
-<li><strong><code>fmin</code></strong>, minimum frequency to display in spectrogram, <strong>this should be low, anything 0-20 seems to work well</strong></li>
-<li><strong><code>fmax</code></strong>, maximum frequency to display. <strong>This should generally be 1/2 of your sample rate, but can be set to 8000 for speech.</strong> </li>
-<li><strong><code>n_mels</code></strong>, How many mel bins to use, this will determine number of pixels tall your sg is. <strong>64-128 are good defaults, but try various values</strong>, bigger isn't always better, test for your dataset. Some evidence suggests upscaling the image to a larger size is more effective than </li>
-<li><strong><code>n_fft</code></strong>, The number of samples you use each time you compute a Fourier Transform. This is the width of the window and hop_length is how much you move the window each step. Increasing n_fft will increase frequency (y-axis) resolution to a point, powers of 2 are faster. Also dependent somewhat on <code>n_mels</code> so 20*n_mels is a common value as less than this can produce empty mel bins (black horizontal lines on sg)</li>
-<li><strong><code>hop_length</code></strong>, the number of samples between successive frames of your sg. Determines width of image (# samples/hop = width in pixels). Good defaults really depend on dataset and the duration of audio your sg's represent (if they are longer, a larger hop is required to fit on a gpu, but you will be compressing the data). If you go too small, you can get blurring. Anything <strong>64-512 can be good depending on context.</strong></li>
-<li><strong><code>top_db</code></strong>, Distance between loudest and softest sound you want displayed in spectrogram. If you choose 50db, the brightest pixel will be 50db, and anything that is 50+db lower than that won't be displayed. <strong>80-120 is good.</strong></li>
-<li><strong><code>power</code></strong>, Honestly not entirely sure how this works. It's set to 1 for "energy" spectrogram and 2 for "power" spectrogram. An energy spectrogram is more detailed (less energy required to show up on the sg) but you don't generally have to worry about this because if you are converting to decibels (you'll do this almost always) it is factored out. 
+Before we get into the details, here is a cheatsheet with a brief summary of what each of these do and some good defaults.
 </div>
-</div></li>
-</ul>
+</div></p>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
+<h2 id="hyperparameter-cheat-sheet">HyperParameter Cheat Sheet</h2>
+<p></div>
+</div></p>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+- <strong><code>sample_rate</code></strong>, This is not the place to change this, you are just telling librosa what your sample rate is. <strong>Usually it is predetermined for you by your dataset but check the resampling section for more info on changing this.</strong>
+- <strong><code>fmin</code></strong>, minimum frequency to display in spectrogram, <strong>this should be low, anything 0-20 seems to work well</strong>
+- <strong><code>fmax</code></strong>, maximum frequency to display. <strong>This should generally be 1/2 of your sample rate, but can be set to 8000 for speech.</strong> 
+- <strong><code>n_mels</code></strong>, How many mel bins to use, this will determine number of pixels tall your sg is. <strong>64-128 are good defaults, but try various values</strong>, bigger isn't always better, test for your dataset. Some evidence suggests upscaling the image to a larger size is more effective than 
+- <strong><code>n_fft</code></strong>, The number of samples you use each time you compute a Fourier Transform. This is the width of the window and hop_length is how much you move the window each step. Increasing n_fft will increase frequency (y-axis) resolution to a point, powers of 2 are faster. Also dependent somewhat on <code>n_mels</code> so 20<em>n_mels is a common value as less than this can produce empty mel bins (black horizontal lines on sg)
+- </em><em><code>hop_length</code></em><em>, the number of samples between successive frames of your sg. Determines width of image (# samples/hop = width in pixels). Good defaults really depend on dataset and the duration of audio your sg's represent (if they are longer, a larger hop is required to fit on a gpu, but you will be compressing the data). If you go too small, you can get blurring. Anything </em><em>64-512 can be good depending on context.</em><em>
+- </em><em><code>top_db</code></em><em>, Distance between loudest and softest sound you want displayed in spectrogram. If you choose 50db, the brightest pixel will be 50db, and anything that is 50+db lower than that won't be displayed. </em><em>80-120 is good.</em><em>
+- </em><em><code>power</code></em>*, Honestly not entirely sure how this works. It's set to 1 for "energy" spectrogram and 2 for "power" spectrogram. An energy spectrogram is more detailed (less energy required to show up on the sg) but you don't generally have to worry about this because if you are converting to decibels (you'll do this almost always) it is factored out. 
+</div>
+</div></p>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
@@ -1780,24 +1969,24 @@ One more bit of bad news. The majority of our important spectrogram hyperparamet
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h1 id="the-details">The Details</h1>
+<h2 id="the-details">The Details</h2>
 <p></div>
-</div></p>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<p><div class="inner_cell" markdown="1">
-<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
-This is the point where we really start getting in the weeds. Spend time here if you're going to spend a lot of time in the audio world, but if you just have one project in mind, you might be better off just using the audio library to see if you can get good results first.
-</div>
 </div></p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"></div>
 </div>
 <p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+This is the point where we really start getting in the weeds. Spend time here if you're going to spend a lot of time in the audio world, but if you just have one project in mind, you might be better off just using the audio library to see if you can get good results first.
+</div>
+</div></p>
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h2 id="fourier-transforms">Fourier Transforms</h2>
+<h3 id="fourier-transforms">Fourier Transforms</h3>
 <p></div>
 </div></p>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1">
@@ -1820,16 +2009,6 @@ Remember a spectrogram is taking a complex signal (the raw waveform) and crackin
 
 
 <div class="output_area" markdown="1">
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-<code>/home/harry/miniconda3/lib/python3.8/site-packages/IPython/core/display.py:717: UserWarning: Consider using IPython.display.IFrame instead
-  warnings.warn(&#34;Consider using IPython.display.IFrame instead&#34;)
-</code>
-</pre>
-</div>
-</div>
-
-<div class="output_area" markdown="1">
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/spUNpyF58BY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -1850,6 +2029,8 @@ Let's reboot our tone generator, add some signals together, and see if the fouri
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
+</div>
+</div>
 <div class="codehilite"><pre><span></span><code><span class="c1"># Adapted from https://musicinformationretrieval.com/audio_representation.html</span>
 <span class="c1"># An amazing open-source resource, especially if music is your sub-domain.</span>
 <span class="k">def</span> <span class="nf">make_tone</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">clip_length</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sr</span><span class="o">=</span><span class="mi">16000</span><span class="p">):</span>
@@ -1858,8 +2039,6 @@ Let's reboot our tone generator, add some signals together, and see if the fouri
 </code></pre></div>
 
 
-</div>
-</div>
 </div>
 
 <div class="cell border-box-sizing code_cell rendered">
@@ -2263,9 +2442,9 @@ Most everything we are interested in for deep learning, noise, speech, music...e
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
-<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
- ## Short-Time Fourier Transform
-</div>
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
+<h3 id="short-time-fourier-transform">Short-Time Fourier Transform</h3>
+<p></div>
 </div></p>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
@@ -2362,7 +2541,7 @@ To understand exactly what is happening inside the STFT, let's start playing wit
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h2 id="n_fft-and-hop_length">n_fft and hop_length</h2>
+<h3 id="n_fft-and-hop_length">n_fft and hop_length</h3>
 <p></div>
 </div></p>
 </div>
@@ -3005,7 +3184,7 @@ I don't have fancy LaTeX for this but the python version is</p>
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h2 id="full-explanation-of-stft-hop_length-and-n_fft">Full explanation of STFT, hop_length, and n_fft:</h2>
+<h3 id="full-explanation-of-stft-hop_length-and-n_fft">Full explanation of STFT, hop_length, and n_fft:</h3>
 <p>Special thanks to <a href="https://forums.fast.ai/u/TomB">Tom B from the forums</a> for pointing out numerous errors in my original. You can read his post <a href="https://forums.fast.ai/t/deep-learning-with-audio-thread/38123/265">here</a></p>
 <p>Feel free to skip this, especially if audio is new to you.</p>
 <p>Remember how we wanted to split a signal into chunks, and then compute the fourier transform of each chunk to see how the frequencies were changing over time? The STFT is taking your signal and splitting it into overlapping chunks based on <code>hop_length</code> and <code>n_fft</code>. The most common analogy for this is a sliding window. Imagine a window that is n samples wide. At the start, the window covers samples 0-n and computes a fourier transform on them. Next it slides h pixels over, and repeats the FT on samples h to n+h. It again slides over h and repeats on samples 2<em>h through n+2</em>h and so on until we reach the end of the signal. n is <code>n_fft</code>, and represents the the width of our window and the width of each chunk (in number of samples), and h is <code>hop_length</code>, and how how many samples we shift to the right each time. If you set hop_length to 100 and n_fft to 1024, the STFT will divide your 52,480 sample long signal into 525 (ceil(52480/100)) chunks that are 1024 samples wide, compute the FFT (fast fourier transform, just an algorithm for computing the FT of a discrete signal) of each one of those chunks. </p>
@@ -3018,7 +3197,7 @@ I don't have fancy LaTeX for this but the python version is</p>
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h2 id="n_mels">n_mels</h2>
+<h3 id="n_mels">n_mels</h3>
 <p></div>
 </div></p>
 </div>
@@ -3268,34 +3447,12 @@ There’s still a bit of a tradeoff as while you get an FFT every hop_length sam
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
-<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h2 id="mel-frequency-cepstral-coefficients">Mel Frequency Cepstral Coefficients</h2>
-<p></div>
-</div></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<p><div class="inner_cell" markdown="1">
-<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h1 id="coming-soon">Coming Soon</h1>
-<ul>
-<li>Nyquist Theorem</li>
-<li>Resampling</li>
-<li>Mono vs Stereo</li>
-<li>MFCCs (Mel Frequency Cepstral Coefficients) </li>
-<li>Delta and Accelerate (Derivatives of spectral extractions)</li>
-</ul>
-<p>...and much more
-</div>
-</div></p>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1">
 This notebook was written by <a href="http://github.com/rbracco">Rob Bracco</a>
 </div>
 </div></p>
+</div>
+</div>
 </div>
                 
               
@@ -3363,8 +3520,8 @@ This notebook was written by <a href="http://github.com/rbracco">Rob Bracco</a>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.fd16492e.min.js"></script>
-      <script src="../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
