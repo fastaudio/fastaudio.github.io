@@ -427,14 +427,12 @@
 <div class="codehilite"><pre><span></span><code>pip install fastaudio
 </code></pre></div>
 
-
 <hr />
 <p>If you plan on <strong>contributing</strong> to the library instead, you will need to do a editable install:</p>
 <div class="codehilite"><pre><span></span><code># <span class="nv">Optional</span> <span class="nv">step</span> <span class="k">if</span> <span class="nv">using</span> <span class="nv">conda</span>
 <span class="nv">conda</span> <span class="nv">create</span> <span class="o">-</span><span class="nv">n</span> <span class="nv">fastaudio</span> <span class="nv">python</span><span class="o">=</span><span class="mi">3</span>.<span class="mi">7</span>
 <span class="nv">conda</span> <span class="nv">activate</span> <span class="nv">fastaudio</span>
 </code></pre></div>
-
 
 <div class="codehilite"><pre><span></span><code># Editable install
 git clone https://github.com/fastaudio/fastaudio.git
@@ -443,12 +441,10 @@ pip install -e .[dev,testing]
 pre-commit install
 </code></pre></div>
 
-
 <h1 id="testing">Testing</h1>
 <p>To run the tests and verify everything is working, run the following command from the <code>fastaudio/</code> folder (only applicable after doing the editable install steps):</p>
 <div class="codehilite"><pre><span></span><code>pytest
 </code></pre></div>
-
 
 <p>This will run all of the test suit, reporting if there are any errors and also giving a code coverage report. Adittionally, there are extra checks that <code>pre-commit</code> run automatically every commit to verify the formatting and flake8 violations. If you want to run those manually, the command is <code>pre-commit run</code></p>
 <h1 id="contributing-to-the-library">Contributing to the library</h1>
