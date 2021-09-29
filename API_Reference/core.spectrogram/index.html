@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.7">
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
     
     
       
-        <title>augment.spectrogram - Fastaudio</title>
+        <title>core.spectrogram - Fastaudio</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8b42a75e.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -36,16 +36,18 @@
     
     
     
-      <link rel="stylesheet" href="../css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
-      <link rel="stylesheet" href="../css/ansi-colours.css">
+      <link rel="stylesheet" href="../../css/ansi-colours.css">
     
-      <link rel="stylesheet" href="../css/jupyter-cells.css">
+      <link rel="stylesheet" href="../../css/jupyter-cells.css">
     
-      <link rel="stylesheet" href="../css/pandas-dataframe.css">
+      <link rel="stylesheet" href="../../css/pandas-dataframe.css">
     
     
       
+
+
     
     
   </head>
@@ -59,7 +61,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -67,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#augmentspectrogram" class="md-skip">
+        <a href="#corespectrogram" class="md-skip">
           Skip to content
         </a>
       
@@ -76,9 +78,11 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Fastaudio" class="md-header__button md-logo" aria-label="Fastaudio" data-md-component="logo">
+    <a href="../.." title="Fastaudio" class="md-header__button md-logo" aria-label="Fastaudio" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -97,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              augment.spectrogram
+              core.spectrogram
             
           </span>
         </div>
@@ -114,14 +118,18 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -151,11 +159,14 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -171,7 +182,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Fastaudio" class="md-nav__button md-logo" aria-label="Fastaudio" data-md-component="logo">
+    <a href="../.." title="Fastaudio" class="md-nav__button md-logo" aria-label="Fastaudio" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -203,7 +214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -218,7 +229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ESC50%3A%20Environmental%20Sound%20Classification.html" class="md-nav__link">
+      <a href="../../ESC50%3A%20Environmental%20Sound%20Classification/" class="md-nav__link">
         ESC50: Environmental Sound Classification
       </a>
     </li>
@@ -233,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Introduction%20to%20Audio.html" class="md-nav__link">
+      <a href="../../Introduction%20to%20Audio/" class="md-nav__link">
         Introduction to Audio
       </a>
     </li>
@@ -248,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Introduction%20to%20Fastaudio.html" class="md-nav__link">
+      <a href="../../Introduction%20to%20Fastaudio/" class="md-nav__link">
         Introduction to Fastaudio
       </a>
     </li>
@@ -263,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Learning%20resources.html" class="md-nav__link">
+      <a href="../../Learning%20resources/" class="md-nav__link">
         Learning resources
       </a>
     </li>
@@ -285,10 +296,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
-      <label class="md-nav__link" for="__nav_6">
-        API Reference
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          API Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="API Reference" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
@@ -297,30 +312,77 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="augment.preprocess.html" class="md-nav__link">
+      <a href="../augment.preprocess/" class="md-nav__link">
         augment.preprocess
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="augment.signal.html" class="md-nav__link">
+      <a href="../augment.signal/" class="md-nav__link">
         augment.signal
       </a>
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augment.spectrogram/" class="md-nav__link">
+        augment.spectrogram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core.config/" class="md-nav__link">
+        core.config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core.signal/" class="md-nav__link">
+        core.signal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
     
@@ -335,12 +397,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          augment.spectrogram
+          core.spectrogram
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="augment.spectrogram.html" class="md-nav__link md-nav__link--active">
-        augment.spectrogram
+      <a href="./" class="md-nav__link md-nav__link--active">
+        core.spectrogram
       </a>
       
         
@@ -358,43 +420,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#croptime" class="md-nav__link">
-    CropTime
+  <a href="#audiospectrogram" class="md-nav__link">
+    AudioSpectrogram
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#maskfreq" class="md-nav__link">
-    MaskFreq
+  <a href="#audiotospec" class="md-nav__link">
+    AudioToSpec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#masktime" class="md-nav__link">
-    MaskTime
+  <a href="#spectrogramtransformer" class="md-nav__link">
+    SpectrogramTransformer
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sgroll" class="md-nav__link">
-    SGRoll
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delta" class="md-nav__link">
-    Delta
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tfmresize" class="md-nav__link">
-    TfmResize
+  <a href="#audiotomfcc" class="md-nav__link">
+    AudioToMFCC
   </a>
   
 </li>
@@ -406,42 +454,7 @@
     </li>
   
 
-          
             
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="core.config.html" class="md-nav__link">
-        core.config
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="core.signal.html" class="md-nav__link">
-        core.signal
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="core.spectrogram.html" class="md-nav__link">
-        core.spectrogram
-      </a>
-    </li>
-  
-
           
         </ul>
       </nav>
@@ -475,43 +488,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#croptime" class="md-nav__link">
-    CropTime
+  <a href="#audiospectrogram" class="md-nav__link">
+    AudioSpectrogram
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#maskfreq" class="md-nav__link">
-    MaskFreq
+  <a href="#audiotospec" class="md-nav__link">
+    AudioToSpec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#masktime" class="md-nav__link">
-    MaskTime
+  <a href="#spectrogramtransformer" class="md-nav__link">
+    SpectrogramTransformer
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sgroll" class="md-nav__link">
-    SGRoll
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delta" class="md-nav__link">
-    Delta
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tfmresize" class="md-nav__link">
-    TfmResize
+  <a href="#audiotomfcc" class="md-nav__link">
+    AudioToMFCC
   </a>
   
 </li>
@@ -529,37 +528,49 @@
               
                 
                 
-                <h1 id="augmentspectrogram">augment.spectrogram</h1>
-<h2 id="croptime">CropTime</h2>
+                <h1 id="corespectrogram">core.spectrogram</h1>
+<h2 id="audiospectrogram">AudioSpectrogram</h2>
 <div class="autodoc">
-<div class="autodoc-signature"><em>class </em><code>fastaudio.augment.spectrogram.<strong>CropTime</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">self</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">duration</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">pad_mode=<AudioPadType.Zeros: 'zeros'></em><span class="autodoc-punctuation">)</span></div>
-<div class="autodoc-docstring"><p>Random crops full spectrogram to be length specified in ms by crop_duration</p></div>
+<div class="autodoc-signature"><em>class </em><code>fastaudio.core.spectrogram.<strong>AudioSpectrogram</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">x</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">**kwargs</em><span class="autodoc-punctuation">)</span></div>
+<div class="autodoc-docstring"><p>Semantic torch tensor that represents an Audio Spectrogram.
+Contains all of the functionality of a normal tensor,
+but has extra properties and knows how to show itself.</p></div>
+<div class="autodoc-members">
+<div class="autodoc-signature"><code><strong>create</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">sg_tensor</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">settings=None</em><span class="autodoc-punctuation">)</span></div>
+<div class="autodoc-docstring"><p>Create an AudioSpectrogram from a torch tensor</p></div>
+<div class="autodoc-signature"><code><strong>duration</strong></code></div>
+<div class="autodoc-docstring"></div>
+<div class="autodoc-signature"><code><strong>height</strong></code></div>
+<div class="autodoc-docstring"></div>
+<div class="autodoc-signature"><code><strong>width</strong></code></div>
+<div class="autodoc-docstring"></div>
+<div class="autodoc-signature"><code><strong>show</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">self</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">ctx=None</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">ax=None</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">title=''</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">**kwargs</em><span class="autodoc-punctuation">)</span></div>
+<div class="autodoc-docstring"><p>Show spectrogram using librosa</p></div>
 </div>
-<h2 id="maskfreq">MaskFreq</h2>
-<div class="autodoc">
-<div class="autodoc-signature"><em>class </em><code>fastaudio.augment.spectrogram.<strong>MaskFreq</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">self</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">num_masks=1</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">size=20</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">start=None</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">val=None</em><span class="autodoc-punctuation">)</span></div>
-<div class="autodoc-docstring"><p>Google SpecAugment frequency masking from https://arxiv.org/abs/1904.08779.</p></div>
 </div>
-<h2 id="masktime">MaskTime</h2>
+<h2 id="audiotospec">AudioToSpec</h2>
 <div class="autodoc">
-<div class="autodoc-signature"><em>class </em><code>fastaudio.augment.spectrogram.<strong>MaskTime</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">self</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">num_masks=1</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">size=20</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">start=None</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">val=None</em><span class="autodoc-punctuation">)</span></div>
-<div class="autodoc-docstring"><p>Google SpecAugment time masking from https://arxiv.org/abs/1904.08779.</p></div>
+<div class="autodoc-signature"><em>class </em><code>fastaudio.core.spectrogram.<strong>AudioToSpec</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">self</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">pipe</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">settings</em><span class="autodoc-punctuation">)</span></div>
+<div class="autodoc-docstring"><p>Transform to create spectrograms from audio tensors.</p></div>
+<div class="autodoc-members">
+<div class="autodoc-signature"><code><strong>from_cfg</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">audio_cfg</em><span class="autodoc-punctuation">)</span></div>
+<div class="autodoc-docstring"><p>Creates AudioToSpec from configuration file</p></div>
 </div>
-<h2 id="sgroll">SGRoll</h2>
-<div class="autodoc">
-<div class="autodoc-signature"><em>class </em><code>fastaudio.augment.spectrogram.<strong>SGRoll</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">self</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">max_shift_pct=0.5</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">direction=0</em><span class="autodoc-punctuation">)</span></div>
-<div class="autodoc-docstring"><p>Shifts spectrogram along x-axis wrapping around to other side</p></div>
 </div>
-<h2 id="delta">Delta</h2>
+<h2 id="spectrogramtransformer">SpectrogramTransformer</h2>
 <div class="autodoc">
-<div class="autodoc-signature"><em>class </em><code>fastaudio.augment.spectrogram.<strong>Delta</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">self</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">width=9</em><span class="autodoc-punctuation">)</span></div>
-<div class="autodoc-docstring"><p>Creates delta with order 1 and 2 from spectrogram
-and concatenate with the original</p></div>
+<div class="autodoc-signature"><code>fastaudio.core.spectrogram.<strong>SpectrogramTransformer</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">mel=True</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">to_db=True</em><span class="autodoc-punctuation">)</span></div>
+<div class="autodoc-docstring"><p>Creates a factory for creating AudioToSpec
+transforms with different parameters</p></div>
 </div>
-<h2 id="tfmresize">TfmResize</h2>
+<h2 id="audiotomfcc">AudioToMFCC</h2>
 <div class="autodoc">
-<div class="autodoc-signature"><em>class </em><code>fastaudio.augment.spectrogram.<strong>TfmResize</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">self</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">size</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">interp_mode='bilinear'</em><span class="autodoc-punctuation">)</span></div>
-<div class="autodoc-docstring"><p>Temporary fix to allow image resizing transform</p></div>
+<div class="autodoc-signature"><em>class </em><code>fastaudio.core.spectrogram.<strong>AudioToMFCC</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">self</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">sample_rate=16000</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">n_mfcc=40</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">dct_type=2</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">norm='ortho'</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">log_mels=False</em><span class="autodoc-punctuation">, </span><em class="autodoc-param">melkwargs=None</em><span class="autodoc-punctuation">)</span></div>
+<div class="autodoc-docstring"><p>Transform to create MFCC features from audio tensors.</p></div>
+<div class="autodoc-members">
+<div class="autodoc-signature"><code><strong>from_cfg</strong></code><span class="autodoc-punctuation">(</span><em class="autodoc-param">audio_cfg</em><span class="autodoc-punctuation">)</span></div>
+<div class="autodoc-docstring"><p>Creates AudioToMFCC from configuration file</p></div>
+</div>
 </div>
                 
               
@@ -580,7 +591,7 @@ and concatenate with the original</p></div>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="augment.signal.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: augment.signal" rel="prev">
+        <a href="../core.signal/" class="md-footer__link md-footer__link--prev" aria-label="Previous: core.signal" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -589,26 +600,11 @@ and concatenate with the original</p></div>
               <span class="md-footer__direction">
                 Previous
               </span>
-              augment.signal
+              core.signal
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="core.config.html" class="md-footer__link md-footer__link--next" aria-label="Next: core.config" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              core.config
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
@@ -616,10 +612,12 @@ and concatenate with the original</p></div>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
         
       </div>
       
@@ -631,10 +629,10 @@ and concatenate with the original</p></div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
       
     
   </body>
