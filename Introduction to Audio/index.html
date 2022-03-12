@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
       
@@ -17,7 +17,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -28,8 +28,9 @@
     
       
         
+        
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -1404,36 +1405,62 @@ Shape : (46720,)
 <table>
 <tr>
     <th>Frequency</th>
-    <td>20</td>
-    <td>160</td>
-    <td>394</td>
-    <td>670</td>
-    <td>1000</td>
-    <td>1420</td>
-    <td>1900</td>
-    <td>2450</td>
-    <td>3120</td>
-    <td>4000</td>
-    <td>5100</td>
-    <td>6600</td>
-    <td>9000</td>
-    <td>14000</td>
+    <th>Mel Equivalent</th>
   </tr>
 <tr>
-    <th>Mel Equivalent</th>
+    <td>20</td>
     <td>0</td>
+  </tr>
+<tr>
+    <td>160</td>
     <td>250</td>
+  </tr>
+<tr>
+    <td>394</td>
     <td>500</td>
+  </tr>
+<tr>
+    <td>670</td>
     <td>750</td>
+  </tr>
+<tr>
     <td>1000</td>
+    <td>1000</td>
+  </tr>
+<tr>
+    <td>1420</td>
     <td>1250</td>
+  </tr>
+<tr>
+    <td>1900</td>
     <td>1500</td>
+  </tr>
+<tr>
+    <td>2450</td>
     <td>1750</td>
+  </tr>
+<tr>
+    <td>3120</td>
     <td>2000</td>
+  </tr>
+<tr>
+    <td>4000</td>
     <td>2250</td>
+  </tr>
+<tr>
+    <td>5100</td>
     <td>2500</td>
+  </tr>
+<tr>
+    <td>6600</td>
     <td>2750</td>
+  </tr>
+<tr>
+    <td>9000</td>
     <td>3000</td>
+  </tr>
+<tr>
+    <td>14000</td>
     <td>3250</td>
   </tr>
 </table>
@@ -1470,9 +1497,9 @@ Shape : (46720,)
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Remember how it was impossible to see the smooth cycles and frequencies in the raw waveform graph of our first audio clip? A spectrogram is an almost magical way of breaking a complex signal apart into it's constituent frequencies, and then representing that as an image. Before we get into how this actually happens, let's see what they look like and how to generate and play with them, because this is more important for training your models than actually understanding what a fourier transform is and how it works. </p>
+<p>Remember how it was impossible to see the smooth cycles and frequencies in the raw waveform graph of our first audio clip? A spectrogram is an almost magical way of breaking an arbitrary signal apart into it's constituent frequencies, and then representing that as an image. Before we get into how this actually happens, let's see what they look like and how to generate and play with them, because this is more important for training your models than actually understanding what a Fourier transform is and how it works. </p>
 <p>Librosa allows us to generate a spectrogram with the melscale directly using <code>librosa.feature.melspectrogram</code>. To demonstrate why the previous discussion of melscale and decibels was necessary, we'll first display a raw spectrogram with <code>librosa.stft</code>, then a melspectrogram, and then finally a melspectrogram on the decibel scale. </p>
-<p>sg = spectrogram, this is a raw energy spectrogram. stft = short-time fourier transform. stft returns a complex result with a real component, the magnitude, and a complex part, the phase. The complex part is typically not used in machine learning applications, but there are a few papers that suggest it is useful so you may want to experiment. For now we will discard it.</p>
+<p>sg = spectrogram, this is a raw energy spectrogram. stft = short-time Fourier transform. The stft transformation yields a complex result, here represented by its magnitude and phase. The phase is typically not used in machine learning applications, but there are a few papers that suggest it is useful so you may want to experiment. For now we will discard it.</p>
 </div>
 </div>
 </div>
@@ -2026,7 +2053,7 @@ Frequency 3: 846
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To use 3Blue1Brown's analogy, we've mixed together 3 colors of paint, and it seems impossible to separate them, but if we do a fourier transform using <code>scipy.fft</code>. Don't worry about understanding the code below, you will not need to do manually fourier transforms. The only things worth noting are that the FT output is complex with a real component (magnitude) and an imaginary one (phase) and we only capture the real. Also fourier transforms output symmetric data so we are only taking the first half. </p>
+<p>To use 3Blue1Brown's analogy, we've mixed together 3 colors of paint, and it seems impossible to separate them, but if we do a Fourier transform using <code>scipy.fft</code>. Don't worry about understanding the code below, you will not need to do manually Fourier transforms. The only things worth noting are that the FT output is complex with a real component and an imaginary one and we only capture the magnitude. Also, since our input signal does not have an imaginary part, the Fourier transforms output is symmetric and we are only taking the first half. </p>
 </div>
 </div>
 </div>
@@ -3175,7 +3202,7 @@ There’s still a bit of a tradeoff as while you get an FFT every hop_length sam
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.8aa65030.min.js"></script>
+      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
       
     
   </body>
